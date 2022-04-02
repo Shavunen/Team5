@@ -8,7 +8,12 @@ public class myQ {
 		boolean success = true;
 		while(success)
 		{
-			int question = input.nextInt();
+			String answer = input.nextLine();
+			int question = 0;
+			try {
+				question = Integer.parseInt(answer);
+			}
+			catch (Exception e) {}
 			if(question == 1) {
 				searchBar();
 				success = false;
