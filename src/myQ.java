@@ -37,26 +37,47 @@ public class myQ {
 	}
 	
 	public static void notification() {
+		String[] topics = {"BlackBoard", "SelfService", "MyHousing", "MyParking", "Email"};
 		Scanner in = new Scanner(System.in);
 		System.out.println("What would you like to view notifications for?");
+		String options = "";
+		for(int i = 0; i < topics.length; i++) options += topics[i] + ", ";
 
+		options += "All";
+		System.out.println(options);
+
+		String[] notifications = {"You are failing 3 classes.", "Your class registration is tomorrow at 7AM.  You do not meet the prerequisites for one class", "Housing selection is next weekend.", "You've received a ticket for parking in a lot you're not allowed to park in",
+		"Submission Received!  You have a meeting to attend via Zoom today."};
 		String answer = in.nextLine();
 
+		String notif;
 		switch(answer.toLowerCase()) {
 			case "blackboard":
-				//TODO: Implement
+				notif = topics[0] + ": " + notifications[0];
+				System.out.println(notif);
 				break;
 			case "selfservice":
-				//TODO: Implement
+				notif = topics[1] + ": " + notifications[1];
+				System.out.println(notif);
 				break;
 			case "myhousing":
-				//TODO: Implement
+				notif = topics[2] + ": " + notifications[2];
+				System.out.println(notif);
 				break;
 			case "myparking":
-				//TODO: Implement
+				notif = topics[3] + ": " + notifications[3];
+				System.out.println(notif);
 				break;
 			case "email":
-				//TODO: Implement
+				notif = topics[4] + ": " + notifications[4];
+				System.out.println(notif);
+				break;
+			case "all":
+				for (int i = 0; i < topics.length; i++)
+				{
+					notif = topics[i] + ": " + notifications[i];
+					System.out.println(notif);
+				}
 				break;
 			default:
 				System.out.println("Invalid response.  Try again");
