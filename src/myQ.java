@@ -37,7 +37,33 @@ public class myQ {
 	}
 	
 	public static void notification() {
-		
+		Scanner in = new Scanner(System.in);
+		System.out.println("What would you like to view notifications for?");
+
+		String answer = in.nextLine();
+
+		switch(answer.toLowerCase()) {
+			case "blackboard":
+				//TODO: Implement
+				break;
+			case "selfservice":
+				//TODO: Implement
+				break;
+			case "myhousing":
+				//TODO: Implement
+				break;
+			case "myparking":
+				//TODO: Implement
+				break;
+			case "email":
+				//TODO: Implement
+				break;
+			default:
+				System.out.println("Invalid response.  Try again");
+				notification();
+
+		}
+
 	}
 	
 	public static void newsFeed() {
