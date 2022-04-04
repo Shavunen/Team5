@@ -146,10 +146,12 @@ public class myQ {
 
 		System.out.println("Here are the latest updates of Quinnipiac University's newsfeed!");
 
-		
+		boolean running = true;
+		while (running) {
+
 
 		System.out.println(
-				"Which of the following categories would you like to see updates on: Sports, Academics, or Community Involvement");
+				"Which of the following categories would you like to see updates on: Sports, Academics, or Community Involvement. Please type Quit to stop");
 		String answer = notification.nextLine();
 		if (answer.equalsIgnoreCase("sports")) {
 			System.out.println(
@@ -165,18 +167,16 @@ public class myQ {
 		else if (answer.equalsIgnoreCase("Community involvement")) {
 			System.out.println(
 					"Please click the link to new the latest community involvement news: https://www.instagram.com/quinnipiacu/ ");
-		} else {
+		} 
+		
+		else if (answer.equalsIgnoreCase("Quit")){
+			running = false;
+		}
+		
+		else {
 			System.out.println("Please choose a valid response");
-
-			boolean running = true;
-			while (running) {
-				System.out.println("Please choose: Sports, Academics, or Community Involvement");
-
-				{
-					running = false;
-
-				}
-
+			
+				
 			}
 
 		}
