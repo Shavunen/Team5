@@ -151,7 +151,7 @@ public class myQ {
 
 
 		System.out.println(
-				"Which of the following categories would you like to see updates on: Sports, Academics, or Community Involvement. Please type Quit to stop");
+				"Which of the following categories would you like to see updates on: Sports, Club News, Academics, or Community Involvement. Please type Quit to stop");
 		String answer = notification.nextLine();
 		if (answer.equalsIgnoreCase("sports")) {
 			System.out.println(
@@ -163,6 +163,10 @@ public class myQ {
 					"Please click the link to new the latest academic news: https://myq.quinnipiac.edu/ACADEMICS/Pages/default.aspx ");
 
 		}
+		else if (answer.equalsIgnoreCase("Club News")) {
+			System.out.println("Please click the link to new the latest Club News: https://myq.quinnipiac.edu/Student%20Life/Student-Centers-Campus-Life/Pages/default.aspx "); 
+		}
+		
 
 		else if (answer.equalsIgnoreCase("Community involvement")) {
 			System.out.println(
@@ -170,6 +174,7 @@ public class myQ {
 		} 
 		
 		else if (answer.equalsIgnoreCase("Quit")){
+			System.out.println("Enjoy the rest of your day :)"); 
 			running = false;
 		}
 		
